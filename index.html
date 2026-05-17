@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riwaaz Butique Collection | Wholesale Price List</title>
+    <title>Riwaaz Butique Collection | Wholesale & Custom Stitching</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
@@ -20,18 +20,29 @@
         .btn-whatsapp { background-color: #25D366; color: white; }
         section { padding: 60px 5%; text-align: center; }
         .section-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary-color); margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; width: 80px; height: 3px; background-color: var(--accent-color); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+        
+        /* Highlighted Special Customer Note */
+        .special-note-box { background-color: #fff3cd; border-left: 6px solid var(--accent-color); color: #856404; padding: 22px; max-width: 1100px; margin: 0 auto 40px auto; border-radius: 4px; font-size: 1.1rem; font-weight: 500; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; }
+        .wholesale-alert-badge { background-color: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 4px; font-weight: 600; margin-bottom: 30px; font-size: 1.2rem; }
+
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         
-        /* Premium Card Design with Photo and Price */
+        /* Premium Card Design */
         .product-card { background: var(--bg-light); border: 1px solid #eaddca; border-radius: 8px; padding: 15px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(88, 24, 69, 0.15); }
         
-        /* Image Styling */
         .product-img { width: 100%; height: 320px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; background-color: #eee; }
         
         .product-card h3 { color: var(--primary-color); font-size: 1.4rem; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
-        .product-card p { font-size: 0.9rem; color: #555; margin-bottom: 12px; height: 40px; overflow: hidden; }
-        .price-badge { background-color: var(--primary-color); color: var(--accent-color); font-size: 1.2rem; font-weight: 600; padding: 6px 15px; display: block; text-align: center; border-radius: 4px; border: 1px solid var(--accent-color); margin-bottom: 10px; }
+        .product-card p { font-size: 0.9rem; color: #555; margin-bottom: 12px; height: 45px; overflow: hidden; }
+        
+        /* Dual Price System (Wholesale vs Retail) */
+        .price-container { background: #ffffff; border: 1px dashed var(--primary-color); padding: 10px; border-radius: 6px; margin-bottom: 12px; }
+        .price-row { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 4px; }
+        .price-row.wholesale { color: #155724; font-weight: 700; font-size: 1.05rem; background: #e8f5e9; padding: 2px 5px; border-radius: 3px; }
+        .price-row.retail { color: #721c24; font-weight: 500; }
+
         .order-btn { display: block; text-align: center; background-color: #25D366; color: white; text-decoration: none; padding: 8px; border-radius: 4px; font-size: 0.95rem; font-weight: 500; }
         
         .contact-box { background-color: var(--primary-color); color: white; max-width: 800px; margin: 0 auto; padding: 40px 20px; border-radius: 8px; border: 2px solid var(--accent-color); }
@@ -46,58 +57,100 @@
         <div class="logo">Riwaaz<span> Butique</span></div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#products">Collection</a>
+            <a href="#products">Rates & Collection</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <h1>Riwaaz <span>Butique Collection</span></h1>
-        <p>Wholesale & Manufacturing Price List With Real Designs</p>
+        <p>Wholesaler, Manufacturer & Expert Custom Stitching Center</p>
         <a href="https://wa.me/918209858341" target="_blank" class="btn btn-whatsapp">📱 Order On WhatsApp</a>
     </section>
 
     <section id="products">
-        <h2 class="section-title">Our Manufacturing Range</h2>
+        
+        <!-- 📢 Special Requirement Note -->
+        <div class="special-note-box">
+            ✨ <strong>CUSTOMER NOTE:</strong> Humare yahan par customer ke according (unke choice aur demand ke mutabik) bhi customized dress ready ki jaati hai! Aap apni manpasand design laakar <strong>stitching / silayi</strong> karwa sakte hain.
+        </div>
+
+        <!-- 💰 Wholesale Alert Message -->
+        <div class="wholesale-alert-badge">
+            🛍️ ALERT: Wholesale (थोक) ka rate Retail (फुटकर) se bilkul alag aur sasta hai! Niche dono rates diye gaye hain.
+        </div>
+
+        <h2 class="section-title">Price List & Catalog</h2>
+        
         <div class="product-grid">
             
-            <!-- PRODUCT 1: KURTI -->
+            <!-- PRODUCT 1: PREMIUM KURTI -->
             <div class="product-card">
-                <!-- 📸 Agar aapne kurti ki photo upload ki hai, toh niche "kurti.jpg" ki jagah us photo ka sahi naam likh dein -->
+                <!-- 📸 GitHub par upload ki hui photo ka naam yahan badlein, jaise "kurti.jpg" -->
                 <img src="kurti.jpg" class="product-img" alt="Premium Kurti">
                 <h3>Premium Kurti</h3>
-                <p>Wholesale designer kurtis boutique finishing ke sath.</p>
-                <div class="price-badge">Wholesale: ₹150 - ₹450</div>
-                <a href="https://wa.me/918209858341?text=I%20want%20to%20order%20Premium%20Kurti" target="_blank" class="order-btn">🟢 WhatsApp Order</a>
+                <p>Boutique-level silayi finishing ke sath dheron trending designs.</p>
+                <div class="price-container">
+                    <div class="price-row wholesale"><span>Wholesale:</span> <span>₹250 - ₹700</span></div>
+                    <div class="price-row retail"><span>Retail Rate:</span> <span>₹300 - ₹500</span></div>
+                </div>
+                <a href="https://wa.me/918209858341?text=Hi,%20I%20want%20to%20order%20Premium%20Kurti" target="_blank" class="order-btn">🟢 Order on WhatsApp</a>
             </div>
 
-            <!-- PRODUCT 2: LEHENGA -->
+            <!-- PRODUCT 2: DESIGNER LEHENGA -->
             <div class="product-card">
-                <!-- 📸 Agar aapne lehenga ki photo ka naam lehenga.jpg rakha hai toh yahan dikhegi -->
                 <img src="lehenga.jpg" class="product-img" alt="Designer Lehenga">
                 <h3>Designer Lehenga</h3>
-                <p>Heavy work, bridal aur party wear modern lehengas.</p>
-                <div class="price-badge">Wholesale: ₹1500 - ₹5000</div>
-                <a href="https://wa.me/918209858341?text=I%20want%20to%20order%20Designer%20Lehenga" target="_blank" class="order-btn">🟢 WhatsApp Order</a>
+                <p>Shaadi, festival aur party wear ke liye heavy work wale modern lehengas.</p>
+                <div class="price-container">
+                    <div class="price-row wholesale"><span>Wholesale:</span> <span>₹1500 - ₹5000</span></div>
+                    <div class="price-row retail"><span>Retail Rate:</span> <span>₹2000 - ₹10000</span></div>
+                </div>
+                <a href="https://wa.me/918209858341?text=Hi,%20I%20want%20to%20order%20Designer%20Lehenga" target="_blank" class="order-btn">🟢 Order on WhatsApp</a>
             </div>
 
-            <!-- PRODUCT 3: ANARKALI -->
+            <!-- PRODUCT 3: ANARKALI LEHENGA -->
             <div class="product-card">
                 <img src="anarkali.jpg" class="product-img" alt="Anarkali Lehenga">
                 <h3>Anarkali Lehenga</h3>
-                <p>Traditional royal look aur heavy gher wale lehengas.</p>
-                <div class="price-badge">Wholesale: ₹1200 - ₹3500</div>
-                <a href="https://wa.me/918209858341?text=I%20want%20to%20order%20Anarkali%20Lehenga" target="_blank" class="order-btn">🟢 WhatsApp Order</a>
+                <p>Traditional royal look aur heavy gher stitched perfection.</p>
+                <div class="price-container">
+                    <div class="price-row wholesale"><span>Wholesale:</span> <span>₹1200 - ₹8000</span></div>
+                    <div class="price-row retail"><span>Retail Rate:</span> <span>₹1500 - ₹5000</span></div>
+                </div>
+                <a href="https://wa.me/918209858341?text=Hi,%20I%20want%20to%20order%20Anarkali%20Lehenga" target="_blank" class="order-btn">🟢 Order on WhatsApp</a>
+            </div>
+
+            <!-- PRODUCT 4: KIDS WEAR -->
+            <div class="product-card">
+                <img src="kids.jpg" class="product-img" alt="Kids Wear">
+                <h3>Kids Wear</h3>
+                <p>Choti bacchiyon ke liye fancy, comfortable aur designer ethnic outfits.</p>
+                <div class="price-container">
+                    <div class="price-row wholesale" style="text-align: center; display: block;"><span>Wholesale Rate:</span> <br><strong>₹250 - ₹2000 tak</strong></div>
+                </div>
+                <a href="https://wa.me/918209858341?text=Hi,%20I%20want%20to%20order%20Kids%20Wear" target="_blank" class="order-btn">🟢 Order on WhatsApp</a>
+            </div>
+
+            <!-- PRODUCT 5: CUSTOM STITCHING / SILAYI -->
+            <div class="product-card">
+                <img src="stitching.jpg" class="product-img" alt="Custom Stitching">
+                <h3>Boutique Stitching</h3>
+                <p>Blouse, Suit-Salwar, Gown aur Lehange ki behtareen fitting aur custom silayi fabric ke mutabik.</p>
+                <div class="price-container">
+                    <div class="price-row wholesale" style="text-align: center; display: block; color: var(--primary-color); background: #f3e5f5;"><span>Silayi Charges:</span> <br><strong>As Per Design (डिज़ाइन के अनुसार)</strong></div>
+                </div>
+                <a href="https://wa.me/918209858341?text=Hi,%20I%20want%20to%20enquire%20about%20Stitching%20charges" target="_blank" class="order-btn">🟢 Enquire Stitching</a>
             </div>
 
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title">Contact For Bulk Orders</h2>
+        <h2 class="section-title">Contact For Wholesale & Retail Orders</h2>
         <div class="contact-box">
             <h3>Riwaaz Butique Collection</h3>
-            <p>Wholesale inquiry ya order lagane ke liye direct call karein:</p>
+            <p>Bulk wholesale buying ya apni customized dress ready karwane ke liye abhi call karein:</p>
             <a href="tel:8209858341" class="contact-number">📞 8209858341</a>
             <a href="https://wa.me/918209858341" target="_blank" class="btn btn-whatsapp">👉 Chat on WhatsApp</a>
         </div>
